@@ -5,8 +5,8 @@ class Student:
     # name  -> imię studenta
     # marks -> lista ocen studenta
     def __init__(self, name, marks):
-        self.name = name      # zapisujemy imię do obiektu
-        self.marks = marks    # zapisujemy listę ocen do obiektu
+        self.name = name  # zapisujemy imię do obiektu
+        self.marks = marks  # zapisujemy listę ocen do obiektu
 
     # Metoda sprawdzająca, czy student zdał
     def is_passed(self):

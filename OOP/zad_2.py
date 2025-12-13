@@ -20,7 +20,9 @@ class Student:
 
 # ===== Library =====
 class Library:
-    def __init__(self, city: str, street: str, zip_code: str, open_hours: str, phone: str):
+    def __init__(
+        self, city: str, street: str, zip_code: str, open_hours: str, phone: str
+    ):
         self.city = city
         self.street = street
         self.zip_code = zip_code
@@ -47,7 +49,7 @@ class Employee:
         city: str,
         street: str,
         zip_code: str,
-        phone: str
+        phone: str,
     ):
         self.first_name = first_name
         self.last_name = last_name
@@ -77,7 +79,7 @@ class Book:
         public_date: str,
         author_name: str,
         author_surname: str,
-        number_of_pages: int
+        number_of_pages: int,
     ):
         self.library = library
         self.public_date = public_date
@@ -98,11 +100,7 @@ class Book:
 # ===== Order =====
 class Order:
     def __init__(
-        self,
-        employee: Employee,
-        student: Student,
-        books: list[Book],
-        order_date: str
+        self, employee: Employee, student: Student, books: list[Book], order_date: str
     ):
         self.employee = employee
         self.student = student
@@ -124,7 +122,9 @@ class Order:
 
 
 # ===== INSTANCJE =====
-library1 = Library("Warszawa", "Marszałkowska 10", "00-001", "8:00-18:00", "111-222-333")
+library1 = Library(
+    "Warszawa", "Marszałkowska 10", "00-001", "8:00-18:00", "111-222-333"
+)
 library2 = Library("Kraków", "Długa 5", "30-001", "9:00-17:00", "444-555-666")
 
 book1 = Book(library1, "2010", "Adam", "Mickiewicz", 300)
@@ -133,9 +133,36 @@ book3 = Book(library2, "2020", "Olga", "Tokarczuk", 380)
 book4 = Book(library2, "2005", "Bolesław", "Prus", 520)
 book5 = Book(library1, "2018", "Andrzej", "Sapkowski", 600)
 
-employee1 = Employee("Jan", "Kowalski", "2020-01-01", "1990-05-05", "Warszawa", "Polna 3", "00-100", "123-123-123")
-employee2 = Employee("Anna", "Nowak", "2018-06-15", "1988-03-12", "Kraków", "Leśna 7", "30-200", "234-234-234")
-employee3 = Employee("Piotr", "Zieliński", "2022-09-01", "1995-11-20", "Warszawa", "Słoneczna 9", "00-300", "345-345-345")
+employee1 = Employee(
+    "Jan",
+    "Kowalski",
+    "2020-01-01",
+    "1990-05-05",
+    "Warszawa",
+    "Polna 3",
+    "00-100",
+    "123-123-123",
+)
+employee2 = Employee(
+    "Anna",
+    "Nowak",
+    "2018-06-15",
+    "1988-03-12",
+    "Kraków",
+    "Leśna 7",
+    "30-200",
+    "234-234-234",
+)
+employee3 = Employee(
+    "Piotr",
+    "Zieliński",
+    "2022-09-01",
+    "1995-11-20",
+    "Warszawa",
+    "Słoneczna 9",
+    "00-300",
+    "345-345-345",
+)
 
 student1 = Student("Kasia", [60, 70, 80])
 student2 = Student("Tomek", [30, 40, 50])

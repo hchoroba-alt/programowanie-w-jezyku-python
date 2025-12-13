@@ -17,7 +17,7 @@ def polacz_i_przetworz(lista1: List[int], lista2: List[int]) -> List[int]:
     bez_duplikatow = set(polaczona)
 
     # Podniesienie każdego elementu zbioru do potęgi 3
-    wynik = [element ** 3 for element in bez_duplikatow]
+    wynik = [element**3 for element in bez_duplikatow]
 
     # Zwracamy przetworzoną listę
     return wynik

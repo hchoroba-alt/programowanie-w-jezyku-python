@@ -37,9 +37,9 @@ class Flat(Property):
             f"  Floor: {self.floor}"
         )
 
+
 house = House(120, 5, 850000, "Warszawa, ul. Leśna 3", 600)
 flat = Flat(55, 2, 420000, "Kraków, ul. Długa 12", 3)
 
 print(house)
 print(flat)
-

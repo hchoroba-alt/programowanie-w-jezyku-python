@@ -15,7 +15,7 @@ def zawiera_wartosc(lista: List[int], wartosc: int) -> bool:
 
 if __name__ == "__main__":
     przyklad_lista = [10, 20, 30, 40, 50]  # przykładowa lista
-    przyklad_wartosc = 30                 # szukana wartość
+    przyklad_wartosc = 30  # szukana wartość
 
     wynik = zawiera_wartosc(przyklad_lista, przyklad_wartosc)
     print(wynik)  # True, bo 30 jest w liście

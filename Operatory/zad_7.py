@@ -1,6 +1,6 @@
-from dataclasses import dataclass   # Ułatwia tworzenie klas danych
-from typing import Optional, List   # Typowanie: Optional, List
-import requests                     # Do połączenia z API HTTP
+from dataclasses import dataclass  # Ułatwia tworzenie klas danych
+from typing import Optional, List  # Typowanie: Optional, List
+import requests  # Do połączenia z API HTTP
 
 
 @dataclass
