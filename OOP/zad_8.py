@@ -5,6 +5,7 @@ import argparse
 # KROK 1: Klasa Brewery
 # =========================
 
+
 class Brewery:
     def __init__(
         self,
@@ -23,7 +24,7 @@ class Brewery:
         phone: str,
         website_url: str,
         state: str,
-        street: str
+        street: str,
     ):
         self.id = id
         self.name = name
@@ -59,16 +60,12 @@ class Brewery:
 # KROK 2: Argumenty z linii poleceń
 # =========================
 
+
 def parse_arguments():
-    parser = argparse.ArgumentParser(
-        description="Fetch breweries from Open Brewery DB"
-    )
+    parser = argparse.ArgumentParser(description="Fetch breweries from Open Brewery DB")
 
     parser.add_argument(
-        "--city",
-        type=str,
-        help="Filter breweries by city name",
-        required=False
+        "--city", type=str, help="Filter breweries by city name", required=False
     )
 
     return parser.parse_args()
@@ -78,16 +75,14 @@ def parse_arguments():
 # KROK 3: Główna logika programu
 # =========================
 
+
 def main():
     args = parse_arguments()
     city = args.city
 
     url = "https://api.openbrewerydb.org/v1/breweries"
 
-    params = {
-        "page": 1,
-        "per_page": 20
-    }
+    params = {"page": 1, "per_page": 20}
 
     # Jeśli użytkownik podał --city, dodajemy filtr
     if city is not None:
@@ -117,7 +112,7 @@ def main():
             phone=item["phone"],
             website_url=item["website_url"],
             state=item["state"],
-            street=item["street"]
+            street=item["street"],
         )
 
         breweries.append(brewery)

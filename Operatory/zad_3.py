@@ -8,7 +8,9 @@ def czy_parzysta(liczba: int) -> bool:
 if __name__ == "__main__":
     testowa_liczba = 7  # tutaj można wpisać dowolną liczbę
 
-    wynik = czy_parzysta(testowa_liczba)  # zapisujemy wynik działania funkcji do zmiennej
+    wynik = czy_parzysta(
+        testowa_liczba
+    )  # zapisujemy wynik działania funkcji do zmiennej
 
     # Sprawdzenie warunku logicznego i wypisanie odpowiedniego komunikatu
     if wynik:

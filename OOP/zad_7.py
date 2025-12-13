@@ -24,6 +24,7 @@ import requests  # requests potrafi wysyłać zapytania HTTP (np. GET) do API
 # KROK 1: Definicja klasy Brewery (czyli "szablonu" na jeden browar)
 # =========================
 
+
 class Brewery:
     """
     Ten obiekt ma przechowywać dane JEDNEGO browaru.
@@ -47,7 +48,7 @@ class Brewery:
         phone: str,
         website_url: str,
         state: str,
-        street: str
+        street: str,
     ):
         # W konstruktorze zapisujemy dane do atrybutów obiektu (self.xxx).
         # self oznacza: "ten konkretny obiekt", który właśnie tworzymy.
@@ -110,10 +111,7 @@ url = "https://api.openbrewerydb.org/v1/breweries"
 # Parametry zapytania:
 # - page=1: pierwsza strona wyników
 # - per_page=20: chcemy dokładnie 20 obiektów
-params = {
-    "page": 1,
-    "per_page": 20
-}
+params = {"page": 1, "per_page": 20}
 
 # Wysyłamy zapytanie GET:
 # API odpowie obiektem response, w którym jest status i treść odpowiedzi.
@@ -165,7 +163,7 @@ for item in data:
         phone=item["phone"],
         website_url=item["website_url"],
         state=item["state"],
-        street=item["street"]
+        street=item["street"],
     )
 
     # Dodajemy nowo utworzony obiekt do listy.

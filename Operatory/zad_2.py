@@ -1,4 +1,6 @@
-from typing import Tuple  # (opcjonalny import — dla typu krotki, jeśli chcielibyśmy zwracać 2 wartości)
+from typing import (
+    Tuple,
+)  # (opcjonalny import — dla typu krotki, jeśli chcielibyśmy zwracać 2 wartości)
 
 
 def mnoz(a: int, b: int) -> int:

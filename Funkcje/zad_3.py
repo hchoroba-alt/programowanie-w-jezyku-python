@@ -1,6 +1,6 @@
 def wyswietl_parzyste(lista_liczb):
     for liczba in lista_liczb:
-        if liczba % 2 == 0:   # liczba parzysta
+        if liczba % 2 == 0:  # liczba parzysta
             print(liczba)
 
 
